@@ -58,140 +58,155 @@ export default function NabarCompo() {
     }
   };
   return (
-    <Navbar className="bg-body-tertiary p-2">
-      <Navbar.Brand className="clr  fnt bg-white rounded-lg brd " href="/">
+    <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
+      {/* <Container> */}
+      <Navbar.Brand href="#home" className="me-auto">
+        {" "}
         <img src="..\images\vucarpng.png" width={200} alt="" height={40} />
       </Navbar.Brand>
-      <Navbar.Toggle />
-      <div className="category">
-        {Category?.map((ele) => {
-          return <p>{ele.category}</p>;
-        })}
-      </div>
-      <Navbar.Collapse className="justify-content-end">
-        <Navbar.Text>
-          <Nav
-            className="me-auto my-2 my-lg-0"
-            style={{ maxHeight: "100px" }}
-            navbarScroll
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Collapse id="responsive-navbar-nav">
+        <Nav className="me-auto">
+          {/* <Nav.Link href="#features">Features</Nav.Link>
+          <Nav.Link href="#pricing">Pricing</Nav.Link>
+          <NavDropdown title="Dropdown" id="collapsible-nav-dropdown">
+            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+            <NavDropdown.Item href="#action/3.2">
+              Another action
+            </NavDropdown.Item>
+            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+            <NavDropdown.Divider />
+            <NavDropdown.Item href="#action/3.4">
+              Separated link
+            </NavDropdown.Item>
+          </NavDropdown> */}
+          <div className="category">
+            {Category?.map((ele) => {
+              return <p>{ele.category}</p>;
+            })}
+          </div>
+        </Nav>
+        <Nav
+          className=""
+          style={{ maxHeight: "100px" }}
+          navbarScroll
+        >
+          <Nav.Link
+            href="https://www.instagram.com/vucareservices/"
+            className="clrc"
           >
-            <Nav.Link
-              href="https://www.instagram.com/vucareservices/"
-              className="clrc"
-            >
-              {/* <FaInstagram /> */}
-              <img
-                className="m-auto"
-                height={45}
-                src="../images/icons8-instagram-windows-11-color-96.png"
-                alt=""
-              />
-            </Nav.Link>
-            <Nav.Link
-              className="cursor-pointer clrc"
-              href="https://www.facebook.com/vucareservices?mibextid=kFxxJD"
-            >
-              <img
-                className="m-auto"
-                height={45}
-                src="../images/icons8-facebook-color-96.png"
-                alt=""
-              />
-            </Nav.Link>
-            <Nav.Link className="clrc">
-              <img
-                onClick={openWhatsapp}
-                className="m-auto"
-                height={45}
-                src="../images/icons8-whatsapp-color-96.png"
-                alt=""
-              />
-            </Nav.Link>
+            {/* <FaInstagram /> */}
+            <img
+              className="m-auto"
+              height={45}
+              src="../images/icons8-instagram-windows-11-color-96.png"
+              alt=""
+            />
+          </Nav.Link>
+          <Nav.Link
+            className="cursor-pointer clrc"
+            href="https://www.facebook.com/vucareservices?mibextid=kFxxJD"
+          >
+            <img
+              className="m-auto"
+              height={45}
+              src="../images/icons8-facebook-color-96.png"
+              alt=""
+            />
+          </Nav.Link>
+          <Nav.Link className="clrc">
+            <img
+              onClick={openWhatsapp}
+              className="m-auto"
+              height={45}
+              src="../images/icons8-whatsapp-color-96.png"
+              alt=""
+            />
+          </Nav.Link>
 
-            <Nav.Link>
-              <a href={`tel:${phoneNumber}`} className="text-decoration-none">
-                <Button variant="outlined" size="medium">
-                  <span className="me-2">
-                    <WifiCalling3Icon style={{ color: "skyblue" }} />
-                  </span>{" "}
-                  <span className="text-dark">+917760120037</span>
+          <Nav.Link>
+            <a href={`tel:${phoneNumber}`} className="text-decoration-none">
+              <Button variant="outlined" size="medium">
+                <span className="me-2">
+                  <WifiCalling3Icon style={{ color: "skyblue" }} />
+                </span>{" "}
+                <span className="text-dark">+917760120037</span>
+              </Button>
+            </a>
+          </Nav.Link>
+          <Nav.Link>
+            <a href={`tel:${phoneNumber}`} className="text-decoration-none">
+              <Button variant="outlined" size="medium">
+                <span className="me-2">
+                  <WifiCalling3Icon style={{ color: "skyblue" }} />
+                </span>{" "}
+                <span className="text-dark">+917337744156 </span>
+              </Button>
+            </a>
+          </Nav.Link>
+          <Nav.Link>
+            <a href={`tel:${phoneNumber}`} className="text-decoration-none">
+              <Button variant="outlined" size="medium">
+                <span className="me-2">
+                  <WifiCalling3Icon style={{ color: "skyblue" }} />
+                </span>{" "}
+                <span className="text-dark">+919980670037 </span>
+              </Button>
+            </a>
+          </Nav.Link>
+          <Nav.Link>
+            <a href={`tel:${phoneNumber}`} className="text-decoration-none">
+              <Button variant="outlined" size="medium">
+                <span className="me-2">
+                  <WifiCalling3Icon style={{ color: "skyblue" }} />
+                </span>{" "}
+                <span className="text-dark">+91 9741317160 </span>
+              </Button>
+            </a>
+          </Nav.Link>
+          <Nav.Link>
+            {userData !== null && userData !== undefined ? (
+              <div className="clr fnt  " onClick={handleShow}>
+                <Button
+                  className="text-dark  responvm p-1"
+                  variant="outlined"
+                  size="medium"
+                >
+                  <img
+                    width={30}
+                    height={30}
+                    src={`${ImagApi}/customer/${userData?.customerprofile}`}
+                    className="me-2"
+                    alt=""
+                    style={{ borderRadius: "100px" }}
+                  />{" "}
+                  {userData.customerName}
                 </Button>
-              </a>
-            </Nav.Link>
-            <Nav.Link>
-              <a href={`tel:${phoneNumber}`} className="text-decoration-none">
-                <Button variant="outlined" size="medium">
-                  <span className="me-2">
-                    <WifiCalling3Icon style={{ color: "skyblue" }} />
-                  </span>{" "}
-                  <span className="text-dark">+917337744156 </span>
+              </div>
+            ) : (
+              <div className="clr fnt ">
+                <Button
+                  className="text-dark responvm me-1  p-1"
+                  variant="outlined"
+                  size="medium"
+                  href="/login"
+                >
+                  Login
                 </Button>
-              </a>
-            </Nav.Link>
-            <Nav.Link>
-              <a href={`tel:${phoneNumber}`} className="text-decoration-none">
-                <Button variant="outlined" size="medium">
-                  <span className="me-2">
-                    <WifiCalling3Icon style={{ color: "skyblue" }} />
-                  </span>{" "}
-                  <span className="text-dark">+919980670037 </span>
+                <Button
+                  className="text-dark  responvm p-1"
+                  variant="outlined"
+                  size="medium"
+                  href="/register"
+                >
+                  Sign Up
                 </Button>
-              </a>
-            </Nav.Link>
-            <Nav.Link>
-              <a href={`tel:${phoneNumber}`} className="text-decoration-none">
-                <Button variant="outlined" size="medium">
-                  <span className="me-2">
-                    <WifiCalling3Icon style={{ color: "skyblue" }} />
-                  </span>{" "}
-                  <span className="text-dark">+91 9741317160 </span>
-                </Button>
-              </a>
-            </Nav.Link>
-            <Nav.Link>
-              {userData !== null && userData !== undefined ? (
-                <div className="clr fnt  " onClick={handleShow}>
-                  <Button
-                    className="text-dark  responvm p-1"
-                    variant="outlined"
-                    size="medium"
-                  >
-                    <img
-                      width={30}
-                      height={30}
-                      src={`${ImagApi}/customer/${userData?.customerprofile}`}
-                      className="me-2"
-                      alt=""
-                      style={{ borderRadius: "100px" }}
-                    />{" "}
-                    {userData.customerName}
-                  </Button>
-                </div>
-              ) : (
-                <div className="clr fnt ">
-                  <Button
-                    className="text-dark responvm me-1  p-1"
-                    variant="outlined"
-                    size="medium"
-                    href="/login"
-                  >
-                    Login
-                  </Button>
-                  <Button
-                    className="text-dark  responvm p-1"
-                    variant="outlined"
-                    size="medium"
-                    href="/register"
-                  >
-                    Sign Up
-                  </Button>
-                </div>
-              )}
-            </Nav.Link>
-          </Nav>
-        </Navbar.Text>
+              </div>
+            )}
+          </Nav.Link>
+        </Nav>
       </Navbar.Collapse>
-
+      {/* </Container> */}
       <Offcanvas placement="end" show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>Profile</Offcanvas.Title>
