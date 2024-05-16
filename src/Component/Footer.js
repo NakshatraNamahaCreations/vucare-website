@@ -43,7 +43,8 @@ export default function Footer() {
                   <LocationOnIcon style={{ color: "white" }} />{" "}
                 </span>
                 <div className="col-md-9 ">
-                  <span>+91 9980670037</span>
+                  {/* <span>+91 9980670037</span> */}
+                  <p>+91 9741317160</p>
                 </div>
               </div>
             </div>

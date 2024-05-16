@@ -40,9 +40,8 @@ export default function NabarCompo() {
     window.location.reload("/");
   };
 
-  const phoneNumber = "9980670037";
   const openWhatsapp = () => {
-    const internationalPhoneNumber = `+${phoneNumber}`;
+    const internationalPhoneNumber = `+${7760120037}`;
     const whatsappLink = `https://wa.me/${internationalPhoneNumber}`;
     window.open(whatsappLink, "_blank");
   };
@@ -86,11 +85,7 @@ export default function NabarCompo() {
             })}
           </div>
         </Nav>
-        <Nav
-          className=""
-          style={{ maxHeight: "100px" }}
-          navbarScroll
-        >
+        <Nav className="" style={{ maxHeight: "100px" }} navbarScroll>
           <Nav.Link
             href="https://www.instagram.com/vucareservices/"
             className="clrc"
@@ -125,7 +120,7 @@ export default function NabarCompo() {
           </Nav.Link>
 
           <Nav.Link>
-            <a href={`tel:${phoneNumber}`} className="text-decoration-none">
+            <a href={`tel:${7760120037}`} className="text-decoration-none">
               <Button variant="outlined" size="medium">
                 <span className="me-2">
                   <WifiCalling3Icon style={{ color: "skyblue" }} />
@@ -135,7 +130,7 @@ export default function NabarCompo() {
             </a>
           </Nav.Link>
           <Nav.Link>
-            <a href={`tel:${phoneNumber}`} className="text-decoration-none">
+            <a href={`tel:${17337744156}`} className="text-decoration-none">
               <Button variant="outlined" size="medium">
                 <span className="me-2">
                   <WifiCalling3Icon style={{ color: "skyblue" }} />
@@ -144,7 +139,7 @@ export default function NabarCompo() {
               </Button>
             </a>
           </Nav.Link>
-          <Nav.Link>
+          {/* <Nav.Link>
             <a href={`tel:${phoneNumber}`} className="text-decoration-none">
               <Button variant="outlined" size="medium">
                 <span className="me-2">
@@ -153,9 +148,9 @@ export default function NabarCompo() {
                 <span className="text-dark">+919980670037 </span>
               </Button>
             </a>
-          </Nav.Link>
+          </Nav.Link> */}
           <Nav.Link>
-            <a href={`tel:${phoneNumber}`} className="text-decoration-none">
+            <a href={`tel:${9741317160}`} className="text-decoration-none">
               <Button variant="outlined" size="medium">
                 <span className="me-2">
                   <WifiCalling3Icon style={{ color: "skyblue" }} />
