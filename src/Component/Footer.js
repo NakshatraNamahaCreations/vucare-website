@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="row p-3 ">
             <div className="col-md-6">
               <div className="col-md-4 bg-white rounded brd">
-                <a href="https://www.instagram.com/vucareservices/">
+                <a href="/">
                   <img
                     className="brd"
                     alt=""

@@ -15,6 +15,7 @@ import { IoLogoWhatsapp } from "react-icons/io";
 import Form from "react-bootstrap/Form";
 
 import NavDropdown from "react-bootstrap/NavDropdown";
+import { Link } from "react-router-dom";
 
 export default function NabarCompo() {
   const storedUserDataJSON = sessionStorage.getItem("userdata");
@@ -59,7 +60,7 @@ export default function NabarCompo() {
   return (
     <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
       {/* <Container> */}
-      <Navbar.Brand href="#home" className="me-auto">
+      <Navbar.Brand href="/" className="me-auto">
         {" "}
         <img src="..\images\vucarpng.png" width={200} alt="" height={40} />
       </Navbar.Brand>
@@ -125,30 +126,21 @@ export default function NabarCompo() {
                 <span className="me-2">
                   <WifiCalling3Icon style={{ color: "skyblue" }} />
                 </span>{" "}
-                <span className="text-dark">+917760120037</span>
+                <span className="text-dark">+91 7760120037</span>
               </Button>
             </a>
           </Nav.Link>
           <Nav.Link>
-            <a href={`tel:${17337744156}`} className="text-decoration-none">
+            <a href={`tel:${7337744156}`} className="text-decoration-none">
               <Button variant="outlined" size="medium">
                 <span className="me-2">
                   <WifiCalling3Icon style={{ color: "skyblue" }} />
                 </span>{" "}
-                <span className="text-dark">+917337744156 </span>
+                <span className="text-dark">+91 7337744156 </span>
               </Button>
             </a>
           </Nav.Link>
-          {/* <Nav.Link>
-            <a href={`tel:${phoneNumber}`} className="text-decoration-none">
-              <Button variant="outlined" size="medium">
-                <span className="me-2">
-                  <WifiCalling3Icon style={{ color: "skyblue" }} />
-                </span>{" "}
-                <span className="text-dark">+919980670037 </span>
-              </Button>
-            </a>
-          </Nav.Link> */}
+
           <Nav.Link>
             <a href={`tel:${9741317160}`} className="text-decoration-none">
               <Button variant="outlined" size="medium">
@@ -180,22 +172,24 @@ export default function NabarCompo() {
               </div>
             ) : (
               <div className="clr fnt ">
-                <Button
-                  className="text-dark responvm me-1  p-1"
-                  variant="outlined"
-                  size="medium"
-                  href="/login"
-                >
-                  Login
-                </Button>
-                <Button
-                  className="text-dark  responvm p-1"
-                  variant="outlined"
-                  size="medium"
-                  href="/register"
-                >
-                  Sign Up
-                </Button>
+                <Link to="/login">
+                  <Button
+                    className="text-dark responvm me-1  p-1"
+                    variant="outlined"
+                    size="medium"
+                  >
+                    Login
+                  </Button>
+                </Link>
+                <Link to="/register">
+                  <Button
+                    className="text-dark  responvm p-1"
+                    variant="outlined"
+                    size="medium"
+                  >
+                    Sign Up
+                  </Button>
+                </Link>
               </div>
             )}
           </Nav.Link>
